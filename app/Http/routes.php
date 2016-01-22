@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'PagesController@home');
 
-Route::get('home', 'HomeController@index');
+Route::resource('activites', 'NewsController');
+Route::resource('comite', 'ComiteController');
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
