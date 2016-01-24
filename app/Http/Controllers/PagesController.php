@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\News;
+use App\Types;
+use App\Chants;
+use App\ChantsCategories;
 
 class PagesController extends Controller {
 
@@ -18,6 +21,19 @@ class PagesController extends Controller {
 	{
 		$lastNews = News::orderBy('id', 'desc')->first();
 		return view('page/home',['news' => $lastNews]);
+	}
+
+	public function comite(){
+		$types = Types::all();
+		return view('page/comite',['types' => $types]);
+	}
+
+	public function chants(){
+
+		$chant = Chants::where('id','24')->get();
+		$categories = ChantsCategories::all();
+
+		return view('page/chants', ["chant" => $chant, "categories" => $categories]);
 	}
 
 

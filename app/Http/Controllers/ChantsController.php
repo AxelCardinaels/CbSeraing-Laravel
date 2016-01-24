@@ -5,10 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-use App\User;
-use App\Types;
-
-class ComiteController extends Controller {
+class ChantsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -17,7 +14,7 @@ class ComiteController extends Controller {
 	 */
 	public function index()
 	{
-
+		//
 	}
 
 	/**
@@ -48,19 +45,7 @@ class ComiteController extends Controller {
 	 */
 	public function show($id)
 	{
-
-
-		$type = Types::where('type',$id)->first();
-		$types = Types::all();
-
-		if($id == "honneur"){
-			$users = User::where('honneur','1')->orderBy('ordre', 'desc')->orderBy('anbapt','desc')->get();
-			return view('comite.show',['type' => $type, 'users' => $users, 'types' => $types]);
-		}else{
-			return view('comite.show',['type' => $type, 'types' => $types]);
-		}
-
-
+		//
 	}
 
 	/**

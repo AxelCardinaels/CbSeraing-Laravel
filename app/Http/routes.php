@@ -11,10 +11,15 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
-
 Route::resource('activites', 'NewsController');
 Route::resource('comite', 'ComiteController');
+Route::resource('chants', 'ChantsCategoriesController');
+
+Route::get('/', 'PagesController@home');
+Route::get('comite', 'PagesController@comite');
+Route::get('chants', 'PagesController@chants');
+
+
 
 Route::controllers([
 	'auth' => 'Auth\AuthController',
