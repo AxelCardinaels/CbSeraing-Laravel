@@ -9,6 +9,9 @@ use App\News;
 use App\Types;
 use App\Chants;
 use App\ChantsCategories;
+use App\Albums;
+use App\Photos;
+
 
 class PagesController extends Controller {
 
@@ -34,6 +37,11 @@ class PagesController extends Controller {
 		$categories = ChantsCategories::all();
 
 		return view('page/chants', ["chant" => $chant, "categories" => $categories]);
+	}
+
+	public function albums(){
+		$albums = Albums::where('parent','0')->get();
+		return view('page/albums', ["albums" => $albums]);
 	}
 
 

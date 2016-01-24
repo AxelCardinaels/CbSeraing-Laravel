@@ -18,6 +18,7 @@ Route::resource('chants', 'ChantsCategoriesController');
 Route::get('/', 'PagesController@home');
 Route::get('comite', 'PagesController@comite');
 Route::get('chants', 'PagesController@chants');
+Route::get('albums', 'PagesController@albums');
 
 
 
