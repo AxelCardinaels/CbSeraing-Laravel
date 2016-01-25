@@ -5,6 +5,10 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use App\Albums;
+use App\Photos;
+
+
 class AlbumsController extends Controller {
 
 	/**
@@ -45,7 +49,12 @@ class AlbumsController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+
+
+		$album = Albums::where('slug',$id)->first();
+		return view('albums.show',['album' => $album]);
+
+
 	}
 
 	/**

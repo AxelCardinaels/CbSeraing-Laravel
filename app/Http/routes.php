@@ -14,6 +14,7 @@
 Route::resource('activites', 'NewsController');
 Route::resource('comite', 'ComiteController');
 Route::resource('chants', 'ChantsCategoriesController');
+Route::resource('albums', 'AlbumsController');
 
 Route::get('/', 'PagesController@home');
 Route::get('comite', 'PagesController@comite');

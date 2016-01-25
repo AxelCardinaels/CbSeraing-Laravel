@@ -20,6 +20,8 @@ class PagesController extends Controller {
 	 *
 	 * @return Response
 	 */
+
+
 	public function home()
 	{
 		$lastNews = News::orderBy('id', 'desc')->first();
@@ -40,6 +42,7 @@ class PagesController extends Controller {
 	}
 
 	public function albums(){
+
 		$albums = Albums::where('parent','0')->get();
 		return view('page/albums', ["albums" => $albums]);
 	}
