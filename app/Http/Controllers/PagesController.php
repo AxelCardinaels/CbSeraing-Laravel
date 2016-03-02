@@ -12,6 +12,7 @@ use App\ChantsCategories;
 use App\Albums;
 use App\Photos;
 use App\ForumCategories;
+use Jenssegers\Date\Date;
 
 
 class PagesController extends Controller {
@@ -26,6 +27,11 @@ class PagesController extends Controller {
 	public function home()
 	{
 		$lastNews = News::orderBy('id', 'desc')->first();
+
+		Date::setLocale('fr');
+		$date = new Date($lastNews->when);
+		$lastNews->when = $date->format('l j F Y');
+		$lastNews->hour = $date->format('H:i');
 		return view('page/home',['news' => $lastNews]);
 	}
 
