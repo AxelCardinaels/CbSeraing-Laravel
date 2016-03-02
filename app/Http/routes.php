@@ -15,11 +15,13 @@ Route::resource('activites', 'NewsController');
 Route::resource('comite', 'ComiteController');
 Route::resource('chants', 'ChantsCategoriesController');
 Route::resource('albums', 'AlbumsController');
+Route::resource('forum', 'ForumCategoriesController');
 
 Route::get('/', 'PagesController@home');
 Route::get('comite', 'PagesController@comite');
 Route::get('chants', 'PagesController@chants');
 Route::get('albums', 'PagesController@albums');
+Route::get('forum', 'PagesController@forum');
 
 
 

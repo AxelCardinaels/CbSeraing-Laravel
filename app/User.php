@@ -36,4 +36,8 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
         return $this->hasOne('App\Types','id','type');
   }
 
+	public function subjects(){
+		return $this->hasMany('App\ForumSubjects','author','id');
+	}
+
 }

@@ -11,6 +11,7 @@ use App\Chants;
 use App\ChantsCategories;
 use App\Albums;
 use App\Photos;
+use App\ForumCategories;
 
 
 class PagesController extends Controller {
@@ -42,9 +43,13 @@ class PagesController extends Controller {
 	}
 
 	public function albums(){
-
 		$albums = Albums::where('parent','0')->get();
 		return view('page/albums', ["albums" => $albums]);
+	}
+
+	public function forum(){
+		$categories = ForumCategories::all();
+		return view('page/forum', ["categories" => $categories]);
 	}
 
 
