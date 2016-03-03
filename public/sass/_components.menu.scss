@@ -1,0 +1,44 @@
+.menu{
+  background:$color-dark;
+  padding:30px 0px;
+  margin-bottom:30px;
+}
+
+.menu__link--principal{
+  color: white;
+  font-size:18px;
+  position: relative;
+  @include transition_css(all,0.3s,ease-in-out,0s);
+
+  &:after{
+    @include transition_css(all,0.25s,ease-in-out,0s);
+    content:"";
+    width:0%;
+    height: 2px;
+    background: lighten($color-mauve,30%);
+    left:0px;
+    display: block;
+    position: absolute;
+    opacity: 0.4;
+  }
+
+  &:hover{
+    color:rgba(white,0.8);
+
+    &:after{
+      width:100%;
+    }
+  }
+
+
+  &+&{
+    margin-left: 30px;
+  }
+}
+
+.menu__link--current{
+  &:after{
+    width: 100%;
+    background: lighten($color-vert,30%);
+  }
+}

@@ -17,11 +17,11 @@ Route::resource('chants', 'ChantsCategoriesController');
 Route::resource('albums', 'AlbumsController');
 Route::resource('forum', 'ForumCategoriesController');
 
-Route::get('/', 'PagesController@home');
-Route::get('comite', 'PagesController@comite');
-Route::get('chants', 'PagesController@chants');
-Route::get('albums', 'PagesController@albums');
-Route::get('forum', 'PagesController@forum');
+Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
+Route::get('comite', ['as' => 'comite', 'uses' => 'PagesController@comite']);
+Route::get('chants', ['as' => 'chants', 'uses' => 'PagesController@chants']);
+Route::get('albums', ['as' => 'albums', 'uses' => 'PagesController@albums']);
+Route::get('forum',  ['as' => 'forum', 'uses' => 'PagesController@forum']);
 
 
 

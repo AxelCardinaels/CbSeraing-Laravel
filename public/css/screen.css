@@ -617,6 +617,43 @@ a {
     .text--facebook:hover:after {
       width: 100%; }
 
+.menu {
+  background: #2c2c2c;
+  padding: 30px 0px;
+  margin-bottom: 30px; }
+
+.menu__link--principal {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+  .menu__link--principal:after {
+    -moz-transition: all 0.25s ease-in-out 0s;
+    -ms-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #b882d9;
+    left: 0px;
+    display: block;
+    position: absolute;
+    opacity: 0.4; }
+  .menu__link--principal:hover {
+    color: rgba(255, 255, 255, 0.8); }
+    .menu__link--principal:hover:after {
+      width: 100%; }
+  .menu__link--principal + .menu__link--principal {
+    margin-left: 30px; }
+
+.menu__link--current:after {
+  width: 100%;
+  background: #04ff49; }
+
 /**
  * #TRUMPS
  */
