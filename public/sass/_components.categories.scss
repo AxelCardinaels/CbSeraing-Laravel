@@ -1,0 +1,16 @@
+.page__cats{
+  float:right;
+  position: relative;
+  bottom:-10px;
+}
+
+
+.cats__link{
+  padding:10px 15px;
+  color:$color-mauve;
+
+  &:hover{
+    border-bottom:1px solid $color-mauve;
+    background: rgba(black,0.03);
+  }
+}

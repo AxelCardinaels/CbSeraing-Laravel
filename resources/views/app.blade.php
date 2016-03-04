@@ -12,10 +12,10 @@
 
 </head>
 <body>
+	<h1 class="hide">Site web du Comité De Baptême De Seraing</h1>
 	@include('partials.nav')
 	@yield('content')
 
 	<!-- Scripts -->
 
-</body>
-</html>
+@include('partials.footer')

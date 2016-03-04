@@ -520,6 +520,9 @@ html {
   font-size: 30px;
   margin: 0px 0px 10px 10px; }
 
+.page__title--float {
+  float: left; }
+
 a {
   text-decoration: none; }
 
@@ -545,9 +548,6 @@ a {
 .wrapper--centered {
   margin: 0px auto; }
 
-/**
- * #COMPONENTS
- */
 .card {
   width: 100%;
   background: white;
@@ -562,10 +562,11 @@ a {
 .card__title, .card__subtitle {
   font-size: 22px;
   font-weight: 600; }
+  .card__title + .card__inner-container, .card__subtitle + .card__inner-container {
+    border-top: 0px solid transparent; }
 
 .card__inner-container {
   border: 1px solid #BFBFBF;
-  border-top: 0px solid transparent;
   padding: 30px; }
 
 .card__image-container {
@@ -617,10 +618,18 @@ a {
     .text--facebook:hover:after {
       width: 100%; }
 
+/**
+ * #COMPONENTS
+ */
 .menu {
   background: #2c2c2c;
-  padding: 30px 0px;
+  padding: 15px 0px;
   margin-bottom: 30px; }
+
+.menu__item {
+  display: inline-block; }
+  .menu__item + .menu__item {
+    margin-left: 30px; }
 
 .menu__link--principal {
   color: white;
@@ -647,12 +656,86 @@ a {
     color: rgba(255, 255, 255, 0.8); }
     .menu__link--principal:hover:after {
       width: 100%; }
-  .menu__link--principal + .menu__link--principal {
-    margin-left: 30px; }
 
 .menu__link--current:after {
   width: 100%;
   background: #04ff49; }
+
+.logo__image {
+  width: 85px; }
+
+.menu__textual-link {
+  display: inline-block;
+  margin-left: 30px;
+  position: relative;
+  bottom: 20px; }
+
+footer {
+  margin: 100px 0px 80px;
+  padding-top: 15px;
+  border-top: 1px solid #D2D2D2; }
+
+.footer__link {
+  color: #6D2D95;
+  position: relative;
+  font-weight: 400;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+  .footer__link:before {
+    -moz-transition: all 0.25s ease-in-out 0s;
+    -ms-transition: all 0.25s ease-in-out 0s;
+    -webkit-transition: all 0.25s ease-in-out 0s;
+    transition: all 0.25s ease-in-out 0s;
+    content: "";
+    width: 0%;
+    height: 1px;
+    background: #6D2D95;
+    left: 0px;
+    bottom: -3px;
+    display: block;
+    position: absolute;
+    opacity: 0.4; }
+  .footer__link:hover {
+    color: #341547; }
+    .footer__link:hover:before {
+      width: 100%; }
+
+.footer__span {
+  color: #6D2D95;
+  font-weight: 400; }
+
+.link--scum {
+  color: #006A1D; }
+  .link--scum:before {
+    color: #006A1D; }
+
+.lift__link {
+  float: left; }
+
+.lift__icon {
+  margin-left: 10px;
+  width: 16px;
+  position: relative;
+  bottom: -3px;
+  opacity: 0.8; }
+
+.credits {
+  float: right;
+  text-align: right; }
+
+.page__cats {
+  float: right;
+  position: relative;
+  bottom: -10px; }
+
+.cats__link {
+  padding: 10px 15px;
+  color: #6D2D95; }
+  .cats__link:hover {
+    border-bottom: 1px solid #6D2D95;
+    background: rgba(0, 0, 0, 0.03); }
 
 /**
  * #TRUMPS

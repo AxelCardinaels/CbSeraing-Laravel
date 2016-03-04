@@ -51,7 +51,7 @@ class ComiteController extends Controller {
 
 
 		$type = Types::where('type',$id)->first();
-		$types = Types::all();
+		$types = Types::whereNotIn('id', [5, 99])->get();
 
 		if($id == "honneur"){
 			$users = User::where('honneur','1')->orderBy('ordre', 'desc')->orderBy('anbapt','desc')->get();

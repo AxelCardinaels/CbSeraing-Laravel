@@ -1,7 +1,15 @@
 .menu{
   background:$color-dark;
-  padding:30px 0px;
+  padding:15px 0px;
   margin-bottom:30px;
+}
+
+.menu__item{
+  display: inline-block;
+
+  &+&{
+    margin-left: 30px;
+  }
 }
 
 .menu__link--principal{
@@ -30,10 +38,6 @@
     }
   }
 
-
-  &+&{
-    margin-left: 30px;
-  }
 }
 
 .menu__link--current{
@@ -41,4 +45,15 @@
     width: 100%;
     background: lighten($color-vert,30%);
   }
+}
+
+.logo__image{
+  width:85px;
+}
+
+.menu__textual-link{
+  display: inline-block;
+  margin-left:30px;
+  position:relative;
+  bottom:20px;
 }

@@ -16,11 +16,15 @@
 .card__title, .card__subtitle{
   font-size:22px;
   font-weight: 600;
+
+  &+.card__inner-container{
+    border-top: 0px solid transparent;
+  }
 }
 
 .card__inner-container{
   border:1px solid $color-card-border;
-  border-top: 0px solid transparent;
+  
   padding:30px;
 }
 

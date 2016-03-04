@@ -36,7 +36,7 @@ class PagesController extends Controller {
 	}
 
 	public function comite(){
-		$types = Types::all();
+		$types = Types::whereNotIn('id', [5, 99])->get();
 		return view('page/comite',['types' => $types]);
 	}
 
