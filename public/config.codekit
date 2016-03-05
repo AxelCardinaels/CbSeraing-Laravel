@@ -1604,6 +1604,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/no-picture.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 33870,
+		"inputAbbreviatedPath": "\/img\/no-picture.jpg",
+		"outputAbbreviatedPath": "\/img\/no-picture.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/totop.png": {
 		"fileType": 32768,
 		"ignore": 0,

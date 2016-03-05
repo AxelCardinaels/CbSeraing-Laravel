@@ -526,6 +526,27 @@ html {
 a {
   text-decoration: none; }
 
+.link--hoverable {
+  position: relative;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s; }
+  .link--hoverable:after {
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+    content: "";
+    width: 0%;
+    height: 1px;
+    left: 0px;
+    display: block;
+    position: absolute;
+    opacity: 0.4; }
+  .link--hoverable:hover:after {
+    width: 100%; }
+
 /**
  * #OBJECTS
  */
@@ -553,11 +574,28 @@ a {
   background: white;
   color: #444; }
 
+.card--user .card__subtitle {
+  color: #005b19; }
+.card--user + .card--user {
+  margin-top: 25px; }
+
+.card--error {
+  background: rgba(255, 0, 0, 0.15); }
+  .card--error .card__inner-container {
+    border: 1px solid rgba(255, 0, 0, 0.3); }
+
 .card__title {
   background: #6D2D95;
   color: white;
   text-align: center;
   padding: 15px 0px; }
+
+.card__title--linked {
+  color: white; }
+  .card__title--linked:after {
+    background: white;
+    height: 2px;
+    opacity: 1; }
 
 .card__title, .card__subtitle {
   font-size: 22px;
@@ -594,29 +632,11 @@ a {
   margin-bottom: 30px; }
 
 .text--facebook {
-  color: #8a39bc;
-  position: relative;
-  -moz-transition: all 0.3s ease-in-out 0s;
-  -ms-transition: all 0.3s ease-in-out 0s;
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s; }
+  color: #8a39bc; }
   .text--facebook:after {
-    -moz-transition: all 0.3s ease-in-out 0s;
-    -ms-transition: all 0.3s ease-in-out 0s;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-    content: "";
-    width: 0%;
-    height: 1px;
-    background: #006A1D;
-    left: 0px;
-    display: block;
-    position: absolute;
-    opacity: 0.4; }
+    background: #006A1D; }
   .text--facebook:hover {
     color: #006A1D; }
-    .text--facebook:hover:after {
-      width: 100%; }
 
 /**
  * #COMPONENTS
@@ -736,6 +756,10 @@ footer {
   .cats__link:hover {
     border-bottom: 1px solid #6D2D95;
     background: rgba(0, 0, 0, 0.03); }
+
+.cats__link--current {
+  color: #006A1D;
+  font-weight: 400; }
 
 /**
  * #TRUMPS

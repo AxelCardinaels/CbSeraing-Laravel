@@ -18,7 +18,7 @@
         <h4 class="card__subtitle">Oripeaux ?</h4>
         <p class="subtitle__text text--oripeaux">{{$news->oripeaux}}</p>
         <h4 class="card__subtitle">Lien Facebook</h4>
-        <a class="subtitle__text text--facebook" href="{{$news->link}}" title="Afficher le lien de l'évènement facebook pour l'évènement {{$news->name}}">{{$news->link}}</a>
+        <a class="subtitle__text text--facebook link--hoverable" href="{{$news->link}}" title="Afficher le lien de l'évènement facebook pour l'évènement {{$news->name}}">{{$news->link}}</a>
       </div>
     </div>
   </acticle>

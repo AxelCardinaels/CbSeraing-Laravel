@@ -2,8 +2,29 @@ a {
     text-decoration: none;
 
 	&:hover{
-		
+
 	}
 
 }
 
+.link--hoverable{
+  position: relative;
+  @include transition_css(all,0.3s,ease-in-out,0s);
+  &:after{
+    @include transition_css(all,0.3s,ease-in-out,0s);
+    content:"";
+    width:0%;
+    height: 1px;
+    left:0px;
+    display: block;
+    position: absolute;
+    opacity: 0.4;
+  }
+
+  &:hover{
+
+    &:after{
+      width:100%;
+    }
+  }
+}

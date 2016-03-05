@@ -3,7 +3,7 @@
   <ul class="menu__list wrapper--large wrapper--centered">
     <li class="menu__item">
       <a href="{{ route('home') }}" alt="Accéder à la page d'accueil de CbSeraing.be"
-      class="menu__logo"><img src="img/logo.png" alt="Logo du comité de Seraing" class="logo__image"/></a>
+      class="menu__logo"><img src="{{ URL::to('/') }}/img/logo.png" alt="Logo du comité de Seraing" class="logo__image"/></a>
     </li>
 
     <div class="menu__textual-link">

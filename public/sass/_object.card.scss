@@ -4,13 +4,40 @@
   color:$color-text;
 }
 
+.card--user{
+  .card__subtitle{
+    color:darken($color-vert,3%);
+  }
+
+  &+&{
+    margin-top:25px;
+  }
+}
+
+.card--error{
+  background: rgba(red,0.15);
+
+
+  .card__inner-container{
+    border:1px solid rgba(red,0.3);
+  }
+}
 
 .card__title{
   background: $color-mauve;
   color:white;
   text-align: center;
   padding:15px 0px;
+}
 
+.card__title--linked{
+  color:white;
+
+  &:after{
+    background: white;
+    height:2px;
+    opacity: 1;
+  }
 }
 
 .card__title, .card__subtitle{
@@ -24,7 +51,7 @@
 
 .card__inner-container{
   border:1px solid $color-card-border;
-  
+
   padding:30px;
 }
 
@@ -63,26 +90,13 @@
 
 .text--facebook{
   color:lighten($color-mauve,10%);
-  position: relative;
-  @include transition_css(all,0.3s,ease-in-out,0s);
-
   &:after{
-    @include transition_css(all,0.3s,ease-in-out,0s);
-    content:"";
-    width:0%;
-    height: 1px;
+
     background: $color-vert;
-    left:0px;
-    display: block;
-    position: absolute;
-    opacity: 0.4;
+
   }
 
   &:hover{
     color:$color-vert;
-
-    &:after{
-      width:100%;
-    }
   }
 }

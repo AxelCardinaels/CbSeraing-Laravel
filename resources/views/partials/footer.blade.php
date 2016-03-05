@@ -2,7 +2,7 @@
   <h2 class="hide">Pied de page</h2>
   <div class="wrapper wrapper--large wrapper--centered clearfix">
     <a href="#" title="Remonter en haut de page" class="lift__link footer__link">On remonte ?
-      <img src="img/totop.png" alt="Flèche remonter en haut de page" class="lift__icon"/>
+      <img src="{{ URL::to('/') }}/img/totop.png" alt="Flèche remonter en haut de page" class="lift__icon"/>
     </a>
 
     <div class="credits">
