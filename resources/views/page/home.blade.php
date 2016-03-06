@@ -10,7 +10,7 @@
         <img src="http://www.cbseraing.be/images/covers/{{$news->cover}}" class="card__image" alt="Affiche de l'évènement {{$news->name}}"></img>
       </div>
       <div class="card__text card__text--middle">
-        <div class="text__description">{{$news->description}}</div>
+        <div class="text__description"><p>{!! $news->description !!}</p></div>
         <h4 class="card__subtitle">Où ?</h4>
         <p class="subtitle__text text--localisation">{{$news->where}}</p>
         <h4 class="card__subtitle">Quand ?</h4>

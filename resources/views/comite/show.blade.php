@@ -36,8 +36,16 @@
       @foreach($users as $user)
       <article class="card card--large card--home card--user">
         <h3 class="card__title">
-          <a href="#" title="Afficher le profil de {{$user->surnom}}" class="card__title--linked">
-             @if ($user->surnom == "") {{$user->nomreel}} @else {{$user->surnom}} ({{$user->nomreel}}) @endif
+          <a href="{{ route('user.show', $user->id) }}" title="Afficher le profil de {{$user->surnom}}" class="card__title--linked link--hoverable">
+            @if($user->surnom == "")
+             {{$user->nomreel}}
+            @else
+              @if($user->nomreel == "")
+               {{$user->surnom}}
+              @else
+               {{$user->surnom}} ({{$user->nomreel}})
+             @endif
+            @endif
           </a>
         </h3>
         <div class="card__inner-container clearfix">
@@ -47,11 +55,11 @@
             <div class="card__text card__text--middle">
               <h4 class="card__subtitle">Baptisé {{$user->anbapt}}</h4>
               <h4 class="card__subtitle">Actuellement</h4>
-              <p class="subtitle__text">{{$user->actu}}</p>
+              <p class="subtitle__text">{!! $user->actu !!}</p>
               <h4 class="card__subtitle">Titres de guindaille</h4>
-              <p class="subtitle__text text--date">{{$user->titres}}</p>
+              <div class="subtitle__text text--date"><p>{!! $user->titres !!}</p></div>
               <h4 class="card__subtitle">Études</h4>
-              <p class="subtitle__text text--oripeaux">{{$user->etudes}}</p>
+              <div class="subtitle__text text--oripeaux"><p>{!! $user->etudes !!}</p></div>
             </div>
         </div>
       </article>
@@ -70,11 +78,18 @@
       @foreach($type->users as $user)
 
 
-
       <article class="card card--large card--home card--user">
         <h3 class="card__title">
-          <a href="#" title="Afficher le profil de {{$user->surnom}}" class="card__title--linked link--hoverable">
-             @if ($user->surnom == "") {{$user->nomreel}} @else {{$user->surnom}} ({{$user->nomreel}}) @endif
+          <a href="{{ route('user.show', $user->id) }}" title="Afficher le profil de {{$user->surnom}}" class="card__title--linked link--hoverable">
+             @if($user->surnom == "")
+              {{$user->nomreel}}
+             @else
+               @if($user->nomreel == "")
+                {{$user->surnom}}
+               @else
+                {{$user->surnom}} ({{$user->nomreel}})
+              @endif
+             @endif
           </a>
         </h3>
         <div class="card__inner-container clearfix">
@@ -84,11 +99,11 @@
             <div class="card__text card__text--middle">
               <h4 class="card__subtitle">Baptisé {{$user->anbapt}}</h4>
               <h4 class="card__subtitle">Actuellement</h4>
-              <p class="subtitle__text">{{$user->actu}}</p>
+              <p class="subtitle__text">{!! $user->actu !!}</p>
               <h4 class="card__subtitle">Titres de guindaille</h4>
-              <p class="subtitle__text text--date">{{$user->titres}}</p>
+              <div class="subtitle__text text--date"><p>{!! $user->titres !!}</p></div>
               <h4 class="card__subtitle">Études</h4>
-              <p class="subtitle__text text--oripeaux">{{$user->etudes}}</p>
+              <div class="subtitle__text text--oripeaux"><p>{!! $user->etudes !!}</p></div>
             </div>
         </div>
       </article>

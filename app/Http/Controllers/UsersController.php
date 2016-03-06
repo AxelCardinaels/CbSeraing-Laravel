@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Types;
 
-class ComiteController extends Controller {
+class UsersController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -17,7 +17,7 @@ class ComiteController extends Controller {
 	 */
 	public function index()
 	{
-
+		//
 	}
 
 	/**
@@ -48,29 +48,12 @@ class ComiteController extends Controller {
 	 */
 	public function show($id)
 	{
+		$user = User::where('id',$id)->first();
+		$user = controller::user_humanized($user);
 
 
-		$type = Types::where('type',$id)->first();
 		$types = Types::whereNotIn('id', [5, 99])->get();
-
-		foreach ($type->users as $user){
-			$user = controller::user_humanized($user);
-		}
-
-		if($id == "honneur"){
-			$users = User::where('honneur','1')->orderBy('ordre', 'desc')->orderBy('anbapt','desc')->get();
-
-			foreach ($users as $user){
-				$user = controller::user_humanized($user);
-			}
-
-			return view('comite.show',['type' => $type, 'users' => $users, 'types' => $types]);
-		}else{
-			return view('comite.show',['type' => $type, 'types' => $types]);
-		}
-
-
-
+		return view('user.show',['user' => $user, 'types' => $types]);
 	}
 
 	/**

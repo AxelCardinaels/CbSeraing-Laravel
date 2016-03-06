@@ -26,4 +26,17 @@ abstract class Controller extends BaseController {
 			return $id.'-'.Controller::strip($name);
 		}
 
+		public function user_humanized($user){
+			$user->actu = str_replace("\n", "</p><p>", preg_replace("/[\r\n]+/", "\n", $user->actu));
+			$user->titres = str_replace("\n", "</p><p>", preg_replace("/[\r\n]+/", "\n", $user->titres));
+			$user->etudes = str_replace("\n", "</p><p>", preg_replace("/[\r\n]+/", "\n", $user->etudes));
+			return $user;
+    }
+
+		public function text_humanized($text){
+			$text = str_replace("\n", "</p><p>", preg_replace("/[\r\n]+/", "\n", $text));
+			return $text;
+    }
+
+
 }

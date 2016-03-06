@@ -9,6 +9,10 @@
     color:darken($color-vert,3%);
   }
 
+  p{
+    font-size: 15px;
+  }
+
   &+&{
     margin-top:25px;
   }
@@ -76,7 +80,7 @@
 }
 
 .subtitle__text + .card__subtitle{
-  margin-top:20px;
+  margin-top:15px;
 }
 
 .card__subtitle{
@@ -86,6 +90,10 @@
 
 .text__description{
   margin-bottom:30px;
+
+  p+p{
+    margin-bottom:20px;
+  }
 }
 
 .text--facebook{

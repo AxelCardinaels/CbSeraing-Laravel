@@ -576,6 +576,8 @@ a {
 
 .card--user .card__subtitle {
   color: #005b19; }
+.card--user p {
+  font-size: 15px; }
 .card--user + .card--user {
   margin-top: 25px; }
 
@@ -622,7 +624,7 @@ a {
   width: 640px; }
 
 .subtitle__text + .card__subtitle {
-  margin-top: 20px; }
+  margin-top: 15px; }
 
 .card__subtitle {
   color: #006A1D;
@@ -630,6 +632,8 @@ a {
 
 .text__description {
   margin-bottom: 30px; }
+  .text__description p + p {
+    margin-bottom: 20px; }
 
 .text--facebook {
   color: #8a39bc; }

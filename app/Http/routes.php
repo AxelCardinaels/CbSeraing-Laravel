@@ -16,6 +16,7 @@ Route::resource('comite', 'ComiteController');
 Route::resource('chants', 'ChantsCategoriesController');
 Route::resource('albums', 'AlbumsController');
 Route::resource('forum', 'ForumCategoriesController');
+Route::resource('user', 'UsersController');
 
 Route::get('/', ['as' => 'home', 'uses' => 'PagesController@home']);
 Route::get('comite', ['as' => 'comite', 'uses' => 'PagesController@comite']);

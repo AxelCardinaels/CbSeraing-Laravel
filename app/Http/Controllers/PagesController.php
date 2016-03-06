@@ -27,6 +27,7 @@ class PagesController extends Controller {
 	public function home()
 	{
 		$lastNews = News::orderBy('id', 'desc')->first();
+		$lastNews->description = Controller::text_humanized($lastNews->description);
 
 		Date::setLocale('fr');
 		$date = new Date($lastNews->when);
