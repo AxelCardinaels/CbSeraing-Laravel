@@ -55,13 +55,14 @@ class ComiteController extends Controller {
 
 		foreach ($type->users as $user){
 			$user = controller::user_humanized($user);
+			$user->etoileCode = controller::user_stars($user->etoiles);
 		}
 
 		if($id == "honneur"){
 			$users = User::where('honneur','1')->orderBy('ordre', 'desc')->orderBy('anbapt','desc')->get();
-
 			foreach ($users as $user){
 				$user = controller::user_humanized($user);
+				$user->etoileCode = controller::user_stars($user->etoiles);
 			}
 
 			return view('comite.show',['type' => $type, 'users' => $users, 'types' => $types]);

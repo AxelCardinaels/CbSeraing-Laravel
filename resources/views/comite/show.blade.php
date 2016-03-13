@@ -51,6 +51,16 @@
         <div class="card__inner-container clearfix">
             <div class="card__image-container card__image-container--large">
               <img src="@if($user->picture == ""){{ URL::to('/') }}/img/no-picture.jpg @else http://www.cbseraing.be/photos/profile/{{$user->picture}} @endif" class="card__image" alt=""></img>
+              <div class="card__etoiles clearfix">
+                @foreach($user->etoileCode as $etoile)
+                  <span class="etoile {{$etoile}}"><span class="hide">{{$etoile}}</span></span><!-- -->
+                @endforeach
+              </div>
+
+                @if($user->fonction == "")
+                @else
+                <h4 class="card__subtitle card__subtitle--center"><span class="hide">fonction occupée actuellement :</span>{{$user->fonction}}</h4>
+                @endif
             </div>
             <div class="card__text card__text--middle">
               <h4 class="card__subtitle">Baptisé {{$user->anbapt}}</h4>
@@ -95,6 +105,16 @@
         <div class="card__inner-container clearfix">
             <div class="card__image-container card__image-container--large">
               <img src="@if($user->picture == ""){{ URL::to('/') }}/img/no-picture.jpg @else http://www.cbseraing.be/photos/profile/{{$user->picture}} @endif" class="card__image" alt=""></img>
+              <div class="card__etoiles clearfix">
+                @foreach($user->etoileCode as $etoile)
+                  <span class="etoile {{$etoile}}"><span class="hide">{{$etoile}}</span></span>
+                @endforeach
+              </div>
+
+              @if($user->fonction == "")
+              @else
+              <h4 class="card__subtitle card__subtitle--center"><span class="hide">fonction occupée actuellement :</span>{{$user->fonction}}</h4>
+              @endif
             </div>
             <div class="card__text card__text--middle">
               <h4 class="card__subtitle">Baptisé {{$user->anbapt}}</h4>

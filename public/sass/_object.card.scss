@@ -59,11 +59,13 @@
   padding:30px;
 }
 
+
 .card__image-container{
   width:450px;
   margin-right:40px;
-    position: relative;
+  position: relative;
 }
+
 
 
 .card__image{
@@ -88,6 +90,10 @@
   margin-bottom:3px;
 }
 
+.card__subtitle--center{
+  text-align: center;
+}
+
 .text__description{
   margin-bottom:30px;
 
@@ -107,4 +113,58 @@
   &:hover{
     color:$color-vert;
   }
+}
+
+
+.card__etoiles{
+  text-align: center;
+  margin:10px 0px 20px;
+}
+.etoile{
+  @include background_size("../img/stars.png",no-repeat,top,center,cover);
+  display: inline-block;
+  margin-right:-4px;
+
+
+}
+
+.etoile--doree, .etoile--argent, .etoile--erasmus, .etoile--fossile-erasmus, .etoile--fossile-doree, .etoile--fossile-argent,
+.etoile--palme-doree, .etoile--palme-argent{
+  height: 35px;
+  width: 35px;
+}
+
+
+
+.etoile--doree, .etoile--fossile-doree{
+  background-position: -72px 0px;
+}
+.etoile--argent, .etoile--fossile-argent{
+  background-position: -36px 0px;
+}
+.etoile--erasmus, .etoile--fossile-erasmus{
+  background-position: 0px 0px;
+}
+
+.etoile--bourgeois{
+  height: 25px;
+  width: 25px;
+  background-position: -51px 0px;
+}
+.etoile--palme-doree{
+  background-position: -110px 0px;
+}
+.etoile--palme-argent{
+  background-position: -123px 0px;
+  width:10px;
+}
+
+.etoile--fossile-erasmus{
+  background-color: black;
+}
+.etoile--fossile-doree{
+  background-color: black;
+}
+.etoile--fossile-argent{
+  background-color: black;
 }

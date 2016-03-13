@@ -38,5 +38,29 @@ abstract class Controller extends BaseController {
 			return $text;
     }
 
+		public function user_stars($stars){
+
+			$code = ['*' => 'etoile--doree',
+			'+' => 'etoile--argent',
+			'r' => 'etoile--erasmus',
+			'R' => 'etoile--fossile-erasmus',
+			'F' => 'etoile--fossile-doree',
+			'f' => 'etoile--fossile-argent',
+			'b' => 'etoile--bourgeois',
+			'/' => 'etoile--palme-doree',
+			'!' => 'etoile--palme-argent'];
+
+			$stars = str_split($stars);
+			$starClass = [];
+
+			foreach($stars as $star){
+				$starCode = strtr($star,$code);
+				array_push($starClass,$starCode);
+			}
+
+			return $starClass;
+
+		}
+
 
 }

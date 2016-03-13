@@ -1615,6 +1615,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/stars.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26059,
+		"inputAbbreviatedPath": "\/img\/stars.png",
+		"outputAbbreviatedPath": "\/img\/stars.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/totop.png": {
 		"fileType": 32768,
 		"ignore": 0,
