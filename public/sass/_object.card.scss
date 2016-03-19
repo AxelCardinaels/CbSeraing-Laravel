@@ -27,6 +27,12 @@
   }
 }
 
+.card--chant{
+  &+&{
+    margin-top:30px;
+  }
+}
+
 .card__title{
   background: $color-mauve;
   color:white;

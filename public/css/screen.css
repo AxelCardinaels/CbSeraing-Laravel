@@ -586,6 +586,9 @@ a {
   .card--error .card__inner-container {
     border: 1px solid rgba(255, 0, 0, 0.3); }
 
+.card--chant + .card--chant {
+  margin-top: 30px; }
+
 .card__title {
   background: #6D2D95;
   color: white;
