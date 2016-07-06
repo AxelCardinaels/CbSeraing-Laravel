@@ -33,31 +33,7 @@
   }
 }
 
-.card__title{
-  background: $color-mauve;
-  color:white;
-  text-align: center;
-  padding:15px 0px;
-}
 
-.card__title--linked{
-  color:white;
-
-  &:after{
-    background: white;
-    height:2px;
-    opacity: 1;
-  }
-}
-
-.card__title, .card__subtitle{
-  font-size:22px;
-  font-weight: 600;
-
-  &+.card__inner-container{
-    border-top: 0px solid transparent;
-  }
-}
 
 .card__inner-container{
   border:1px solid $color-card-border;
@@ -83,22 +59,15 @@
   float:left;
 }
 
+.card__text--author{
+  float: right;
+  margin-right:15px;
+}
+
 .card__text--middle{
   width: 640px;
 }
 
-.subtitle__text + .card__subtitle{
-  margin-top:15px;
-}
-
-.card__subtitle{
-  color:$color-vert;
-  margin-bottom:3px;
-}
-
-.card__subtitle--center{
-  text-align: center;
-}
 
 .text__description{
   margin-bottom:30px;
@@ -173,4 +142,33 @@
 }
 .etoile--fossile-argent{
   background-color: black;
+}
+
+.card--forum-cats{
+  position:relative;
+  @include transition_css(background,0.25s,ease-in-out,0s);
+
+  &:hover{
+    background:rgba($color-vert,0.25);
+  }
+  &+&{
+    margin-top:10px;
+  }
+  .card__inner-container{
+    padding:10px 5px 10px 25px;
+    position:relative;
+    border-left:none;
+
+    &:before{
+      content:"";
+      height:calc(100% + 2px);
+      width:10px;
+      position:absolute;
+      left:0px;
+      top:-1px;
+      display:block;
+      background-color:$color-mauve;
+
+    }
+  }
 }

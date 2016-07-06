@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\ForumCategories;
 use App\ForumSubjects;
+use Jenssegers\Date\Date;
 
 class ForumCategoriesController extends Controller {
 
@@ -49,6 +50,16 @@ class ForumCategoriesController extends Controller {
 	{
 		$categories = ForumCategories::all();
 		$categorie = ForumCategories::where('slug',$id)->first();
+
+		foreach($categorie->subjects as $subject){
+			Date::setLocale('fr');
+			$date = new Date($subject->created);
+			$subject->when = $date->format('j F Y');
+		}
+
+
+
+
 		return view('forum.categorie.show',['categorie' => $categorie]);
 	}
 

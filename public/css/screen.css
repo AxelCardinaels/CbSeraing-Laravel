@@ -523,6 +523,40 @@ html {
 .page__title--float {
   float: left; }
 
+.card__title {
+  background: #6D2D95;
+  color: white;
+  text-align: center;
+  padding: 15px 0px; }
+
+.card__title--linked {
+  color: white; }
+  .card__title--linked:after {
+    background: white;
+    height: 2px;
+    opacity: 1; }
+
+.card__title, .card__subtitle {
+  font-size: 22px;
+  font-weight: 600; }
+  .card__title + .card__inner-container, .card__subtitle + .card__inner-container {
+    border-top: 0px solid transparent; }
+
+.subtitle__text + .card__subtitle {
+  margin-top: 15px; }
+
+.card__subtitle {
+  color: #006A1D;
+  margin-bottom: 3px; }
+
+.card__subtitle--center {
+  text-align: center; }
+
+.forum__title--cats {
+  font-size: 16px;
+  font-weight: 600;
+  color: #006A1D; }
+
 a {
   text-decoration: none; }
 
@@ -589,25 +623,6 @@ a {
 .card--chant + .card--chant {
   margin-top: 30px; }
 
-.card__title {
-  background: #6D2D95;
-  color: white;
-  text-align: center;
-  padding: 15px 0px; }
-
-.card__title--linked {
-  color: white; }
-  .card__title--linked:after {
-    background: white;
-    height: 2px;
-    opacity: 1; }
-
-.card__title, .card__subtitle {
-  font-size: 22px;
-  font-weight: 600; }
-  .card__title + .card__inner-container, .card__subtitle + .card__inner-container {
-    border-top: 0px solid transparent; }
-
 .card__inner-container {
   border: 1px solid #BFBFBF;
   padding: 30px; }
@@ -623,18 +638,12 @@ a {
 .card__text, .card__image-container {
   float: left; }
 
+.card__text--author {
+  float: right;
+  margin-right: 15px; }
+
 .card__text--middle {
   width: 640px; }
-
-.subtitle__text + .card__subtitle {
-  margin-top: 15px; }
-
-.card__subtitle {
-  color: #006A1D;
-  margin-bottom: 3px; }
-
-.card__subtitle--center {
-  text-align: center; }
 
 .text__description {
   margin-bottom: 30px; }
@@ -693,6 +702,40 @@ a {
 
 .etoile--fossile-argent {
   background-color: black; }
+
+.card--forum-cats {
+  position: relative;
+  -moz-transition: background 0.25s ease-in-out 0s;
+  -ms-transition: background 0.25s ease-in-out 0s;
+  -webkit-transition: background 0.25s ease-in-out 0s;
+  transition: background 0.25s ease-in-out 0s; }
+  .card--forum-cats:hover {
+    background: rgba(0, 106, 29, 0.25); }
+  .card--forum-cats + .card--forum-cats {
+    margin-top: 10px; }
+  .card--forum-cats .card__inner-container {
+    padding: 10px 5px 10px 25px;
+    position: relative;
+    border-left: none; }
+    .card--forum-cats .card__inner-container:before {
+      content: "";
+      height: calc(100% + 2px);
+      width: 10px;
+      position: absolute;
+      left: 0px;
+      top: -1px;
+      display: block;
+      background-color: #6D2D95; }
+
+.cats__description {
+  font-size: 14px;
+  color: #5e5e5e; }
+
+.forum__link {
+  position: relative; }
+
+.subject__author {
+  color: #6D2D95; }
 
 /**
  * #COMPONENTS

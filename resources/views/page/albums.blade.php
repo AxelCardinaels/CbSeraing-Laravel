@@ -1,20 +1,35 @@
 @extends('app')
 
 @section('content')
-<H1>Les photos</h1>
+<main class="wrapper wrapper--large wrapper--centered">
+  <div class="page__upper clearfix">
+    <h2 class="page__title page__title--float">Les photos</h2>
+  </div>
+  <div class="card card--large card--home">
+    <div class="card__inner-container clearfix">
+      @foreach ($albums as $album)
 
-  {{$albums}}
 
-  @foreach ($albums as $album)
-    {{$album}}
-    @foreach ($album->childrens as $children)
-      {{$children}}
+        <article class="card__album">
+          {{$album}}<a href="" title="afficher le contenu de l'album {{$album->name}}" class='album__link'></a>
 
-      @foreach ($children->photos as $photo)
-        {{$photo}}
+          <h3 class="card__subtitle card__subtitle--center">{{$album->name}}</h3>
+        </article>
       @endforeach
-    @endforeach
-  @endforeach
+    </div>
+
+  </div>
+</main>
+
 
 
 @endsection
+
+
+<!--@foreach ($album->childrens as $children)
+  {{$children}}
+
+  @foreach ($children->photos as $photo)
+    {{$photo}}
+  @endforeach
+@endforeach -->

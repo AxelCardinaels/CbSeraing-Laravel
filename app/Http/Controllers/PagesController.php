@@ -51,6 +51,13 @@ class PagesController extends Controller {
 
 	public function albums(){
 		$albums = Albums::where('parent','0')->get();
+
+		foreach($albums as $parent){
+			foreach($parent->childrens as $babies){
+				$picture = $babies->photos->random(1);
+				$parent->randomPicture = $picture;
+			}
+		}
 		return view('page/albums', ["albums" => $albums]);
 	}
 
