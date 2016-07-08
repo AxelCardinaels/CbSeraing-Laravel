@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\ForumCategories;
 use App\ForumSubjects;
+use App\ForumMessages;
 use Jenssegers\Date\Date;
 
 class ForumCategoriesController extends Controller {
@@ -55,7 +56,10 @@ class ForumCategoriesController extends Controller {
 			Date::setLocale('fr');
 			$date = new Date($subject->created);
 			$subject->when = $date->format('j F Y');
+
+
 		}
+
 
 
 

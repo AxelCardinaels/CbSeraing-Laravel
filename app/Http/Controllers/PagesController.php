@@ -66,5 +66,13 @@ class PagesController extends Controller {
 		return view('page/forum', ["categories" => $categories]);
 	}
 
+	public function contact(){
+		return view('page/contact');
+	}
+
+	public function login(){
+		return view('page/login');
+	}
+
 
 }

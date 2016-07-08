@@ -23,6 +23,8 @@ Route::get('comite', ['as' => 'comite', 'uses' => 'PagesController@comite']);
 Route::get('chants', ['as' => 'chants', 'uses' => 'PagesController@chants']);
 Route::get('albums', ['as' => 'albums', 'uses' => 'PagesController@albums']);
 Route::get('forum',  ['as' => 'forum', 'uses' => 'PagesController@forum']);
+Route::get('contact',  ['as' => 'contact', 'uses' => 'PagesController@contact']);
+Route::get('login',  ['as' => 'login', 'uses' => 'PagesController@login']);
 
 
 

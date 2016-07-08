@@ -577,7 +577,7 @@ a {
     left: 0px;
     display: block;
     position: absolute;
-    opacity: 0.4; }
+    opacity: 0.7; }
   .link--hoverable:hover:after {
     width: 100%; }
 
@@ -602,6 +602,9 @@ a {
 
 .wrapper--centered {
   margin: 0px auto; }
+
+.wrapper--login {
+  width: 550px; }
 
 .card {
   width: 100%;
@@ -737,6 +740,27 @@ a {
 .subject__author {
   color: #6D2D95; }
 
+.form__input {
+  width: 100%;
+  border: 1px solid #BFBFBF; }
+
+.form__input, .form__bouton {
+  border-radius: 4px;
+  padding: 6px 12px;
+  display: block; }
+
+.form__group + .form__group {
+  margin-top: 20px; }
+
+.form__label {
+  display: block;
+  margin-bottom: 5px; }
+
+.form__bouton {
+  background: #6D2D95;
+  color: white;
+  border: none; }
+
 /**
  * #COMPONENTS
  */
@@ -744,6 +768,9 @@ a {
   background: #2c2c2c;
   padding: 15px 0px;
   margin-bottom: 30px; }
+
+.menu__list {
+  position: relative; }
 
 .menu__item {
   display: inline-block; }
@@ -787,7 +814,13 @@ a {
   display: inline-block;
   margin-left: 30px;
   position: relative;
-  bottom: 20px; }
+  top: 15px; }
+
+.menu__textual-link--right {
+  float: right; }
+
+.menu__textual-link--left {
+  float: left; }
 
 footer {
   margin: 100px 0px 80px;
@@ -859,6 +892,23 @@ footer {
 .cats__link--current {
   color: #006A1D;
   font-weight: 400; }
+
+.contact__data {
+  margin-top: 5px; }
+
+.contact__link {
+  color: #6D2D95; }
+  .contact__link:after {
+    background: #6D2D95; }
+
+.bouton--login {
+  width: 100%; }
+
+.login__inputs {
+  margin-bottom: 50px; }
+
+.label--login {
+  text-align: center; }
 
 /**
  * #TRUMPS

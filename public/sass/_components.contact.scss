@@ -1,0 +1,10 @@
+.contact__data{
+  margin-top:5px;
+}
+
+.contact__link{
+  color:$color-mauve;
+  &:after{
+    background:$color-mauve;
+  }
+}
