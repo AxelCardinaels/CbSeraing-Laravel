@@ -642,11 +642,19 @@ a {
   float: left; }
 
 .card__text--author {
-  float: right;
-  margin-right: 15px; }
+  float: right; }
 
 .card__text--middle {
   width: 640px; }
+
+.card__text--message {
+  width: 940px;
+  float: right; }
+
+.message__author {
+  float: left;
+  width: 200px;
+  padding-right: 15px; }
 
 .text__description {
   margin-bottom: 30px; }
@@ -712,12 +720,12 @@ a {
   -ms-transition: background 0.25s ease-in-out 0s;
   -webkit-transition: background 0.25s ease-in-out 0s;
   transition: background 0.25s ease-in-out 0s; }
-  .card--forum-cats:hover {
+  .card--forum-cats--hoverable:hover {
     background: rgba(0, 106, 29, 0.25); }
   .card--forum-cats + .card--forum-cats {
     margin-top: 10px; }
   .card--forum-cats .card__inner-container {
-    padding: 10px 5px 10px 25px;
+    padding: 10px 25px 10px 25px;
     position: relative;
     border-left: none; }
     .card--forum-cats .card__inner-container:before {
@@ -730,7 +738,7 @@ a {
       display: block;
       background-color: #6D2D95; }
 
-.cats__description {
+.cats__description, .author__description {
   font-size: 14px;
   color: #5e5e5e; }
 
@@ -739,6 +747,13 @@ a {
 
 .subject__author {
   color: #6D2D95; }
+
+.author__description {
+  text-align: center;
+  padding: 0px 10px; }
+
+.message__author, .subject__message {
+  margin-top: 10px; }
 
 .form__input {
   width: 100%;
@@ -760,6 +775,18 @@ a {
   background: #6D2D95;
   color: white;
   border: none; }
+
+.forum__ariane {
+  margin-bottom: 25px;
+  font-size: 14px;
+  padding-left: 35px; }
+
+.ariane__link {
+  margin-right: 7px; }
+  .ariane__link + .ariane__link {
+    margin-left: 7px; }
+  .ariane__link + span {
+    margin-left: 7px; }
 
 /**
  * #COMPONENTS

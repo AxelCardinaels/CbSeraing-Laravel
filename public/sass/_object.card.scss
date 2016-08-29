@@ -37,7 +37,6 @@
 
 .card__inner-container{
   border:1px solid $color-card-border;
-
   padding:30px;
 }
 
@@ -61,11 +60,21 @@
 
 .card__text--author{
   float: right;
-  margin-right:15px;
 }
 
 .card__text--middle{
   width: 640px;
+}
+
+.card__text--message{
+  width:940px;
+  float:right;
+}
+
+.message__author{
+  float:left;
+  width:200px;
+  padding-right:15px;
 }
 
 
@@ -148,14 +157,15 @@
   position:relative;
   @include transition_css(background,0.25s,ease-in-out,0s);
 
-  &:hover{
+  &--hoverable:hover{
     background:rgba($color-vert,0.25);
   }
+
   &+&{
     margin-top:10px;
   }
   .card__inner-container{
-    padding:10px 5px 10px 25px;
+    padding:10px 25px 10px 25px;
     position:relative;
     border-left:none;
 
@@ -171,4 +181,5 @@
 
     }
   }
+
 }

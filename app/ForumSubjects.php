@@ -7,14 +7,14 @@ class ForumSubjects extends Model {
 	protected $table = 'cbs_forum_subjects';
 
 	public function category(){
-		return $this->hasOne('App\forumCategories','id','category');
+		return $this->hasOne('App\ForumCategories','id','category');
 	}
 
 	public function messages(){
-		return $this->hasMany('App\forumMessages','subject','id');
+		return $this->hasMany('App\ForumMessages','subject','id')->orderBy('created');
 	}
 
-	public function author(){
+	public function autheur(){
 		return $this->hasOne('App\User','id','author');
 	}
 

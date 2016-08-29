@@ -50,7 +50,19 @@ class ForumSujetsController extends Controller {
 	public function show($id)
 	{
 		$sujet = ForumSubjects::where("id",$id)->first();
-		$categorie = ForumCategories::where('id', $sujet->category)->first();
+		$categorie = ForumCategories::find($sujet->category);
+
+
+
+		foreach($sujet->messages as $message){
+			Date::setLocale('fr');
+			$date = new Date($message->created);
+			$message->when = $date->format('j F Y');
+
+			$message->message = $this::text_humanized($message->message);
+		}
+
+
 		return view('forum.sujets.show',['categorie' => $categorie, "sujet" => $sujet]);
 	}
 

@@ -1,4 +1,4 @@
-.cats__description{
+.cats__description, .author__description{
   font-size:14px;
   color:lighten($color-text,10%);
 }
@@ -8,4 +8,13 @@
 }
 .subject__author{
   color:$color-mauve;
+}
+
+.author__description{
+  text-align: center;
+  padding:0px 10px;
+}
+
+.message__author, .subject__message{
+  margin-top:10px;
 }

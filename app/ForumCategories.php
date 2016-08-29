@@ -7,7 +7,7 @@ class ForumCategories extends Model {
 	protected $table = 'cbs_forum_categories';
 
 	public function subjects(){
-		return $this->hasMany('App\forumSubjects','category','id');
+		return $this->hasMany('App\ForumSubjects','category','id');
 	}
 
 }

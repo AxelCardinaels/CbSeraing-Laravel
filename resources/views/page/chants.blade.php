@@ -20,14 +20,14 @@
     </nav>
   </div>
 
-      @foreach($chant as $chantSolo)
+
       <div class="card card--large card--chant">
         <div class="card__inner-container clearfix">
-          <h3 class="card__subtitle">{{$chantSolo->titre}}</h3>
-          <p>{!! nl2br($chantSolo->chant) !!}</p>
+          <h3 class="card__subtitle">{{$chant->titre}}</h3>
+          <p>{!! nl2br($chant->chant) !!}</p>
         </div>
       </div>
-      @endforeach
+
 
 </main>
 

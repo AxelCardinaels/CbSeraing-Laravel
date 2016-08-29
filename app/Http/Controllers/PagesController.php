@@ -27,7 +27,7 @@ class PagesController extends Controller {
 	public function home()
 	{
 		$lastNews = News::orderBy('id', 'desc')->first();
-		$lastNews->description = Controller::text_humanized($lastNews->description);
+		$lastNews->description = $this::text_humanized($lastNews->description);
 
 		Date::setLocale('fr');
 		$date = new Date($lastNews->when);
@@ -43,7 +43,7 @@ class PagesController extends Controller {
 
 	public function chants(){
 
-		$chant = Chants::where('id','24')->get();
+		$chant = Chants::find('24');
 		$categories = ChantsCategories::all();
 
 		return view('page/chants', ["chant" => $chant, "categories" => $categories]);
