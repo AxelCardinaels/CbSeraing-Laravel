@@ -9,7 +9,7 @@ use App\ForumSubjects;
 use App\ForumMessages;
 use Jenssegers\Date\Date;
 
-class ForumCategoriesController extends Controller {
+class ForumSujetsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -49,20 +49,9 @@ class ForumCategoriesController extends Controller {
 	 */
 	public function show($id)
 	{
-		$categories = ForumCategories::all();
-		$categorie = ForumCategories::where('slug',$id)->first();
-
-		foreach($categorie->subjects as $subject){
-			Date::setLocale('fr');
-			$date = new Date($subject->created);
-			$subject->when = $date->format('j F Y');
-		}
-
-
-
-
-
-		return view('forum.categorie.show',['categorie' => $categorie]);
+		$sujet = ForumSubjects::where("id",$id)->first();
+		$categorie = ForumCategories::where('id', $sujet->category)->first();
+		return view('forum.sujets.show',['categorie' => $categorie, "sujet" => $sujet]);
 	}
 
 	/**
