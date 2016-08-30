@@ -146,6 +146,7 @@ return [
 		'App\Providers\RouteServiceProvider',
 
 		'Jenssegers\Date\DateServiceProvider',
+		'Golonka\BBCode\BBCodeParserServiceProvider',
 
 	],
 
@@ -194,6 +195,7 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
+		'BBCode' => 'Golonka\BBCode\Facades\BBCodeParser',
 
 	],
 

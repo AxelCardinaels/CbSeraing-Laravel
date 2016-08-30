@@ -8,6 +8,7 @@ use App\ForumCategories;
 use App\ForumSubjects;
 use App\ForumMessages;
 use Jenssegers\Date\Date;
+use Golonka\BBCode\BBCodeParser;
 
 class ForumSujetsController extends Controller {
 
@@ -58,8 +59,8 @@ class ForumSujetsController extends Controller {
 			Date::setLocale('fr');
 			$date = new Date($message->created);
 			$message->when = $date->format('j F Y');
-
 			$message->message = $this::text_humanized($message->message);
+			$message->message = BBCode::parse($message->message);
 		}
 
 

@@ -18,7 +18,7 @@
         </div>
 
         <div class="card__text card__text--author">
-          <p class="cats__description">Le {{$subject->when}} par <span class="subject__author">{{$subject->autheur->surnom}}<span></p>
+          <p class="cats__description">Le {{$subject->when}} par <span class="subject__author">{{$subject->autheur->surnom}}</span></p>
         </div>
     </div>
   </a>
